@@ -54,16 +54,66 @@
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                    //Call Hello World
-                    function helloWorld(){
-                        alert("Hello World!");
-                    }
+                        //Start function
+function getValues() {
+    //Get values from the page
+    let fizzValue = document.getElementById("fizzValue").value;
+    let buzzValue = document.getElementById("buzzValue").value;
+
+    //Type casting
+    fizzValue = parseInt(fizzValue);
+    buzzValue = parseInt(buzzValue);
+
+    //Validation
+    if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
+        let fbArray = fizzBuzz(fizzValue, buzzValue);
+
+        //Display data
+        displayData(fbArray);
+    } else {
+        alert("Error: You must enter integers!");
+    }
+}
+
+//Number or fizz or buzz?
+function fizzBuzz(fizzValue, buzzValue) {
+    let returnArray = [];
+
+    //Loop from 1 to 100
+    for (let i = 1; i <= 100; i++) {
+        //Check to see if divisible by both
+        if (i % fizzValue == 0 && i % buzzValue == 0) {
+            returnArray.push("FizzBuzz");
+            //Check to see if divisible by fizz value
+        } else if (i % fizzValue == 0) {
+            returnArray.push("Fizz");
+            //Check to see if divisible by buzz value
+        } else if (i % buzzValue == 0) {
+            returnArray.push("Buzz");
+        } else {
+            returnArray.push(i);
+        }
+    }
+
+    return returnArray;
+}
                 </code></pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The code is structured in one function.</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with a message of "Hello World!".</p>
+                    <p>The code is structured in three functions, <strong>getValues()</strong>,
+                        <strong>fizzBuzz()</strong> &
+                        <strong>displayData()</strong></p>
+                    <hr>
+                    <h5>getValues()</h5>
+                    <p>The function is triggered by an event listener,
+                        <strong>document.getElementById("btnSubmit").addEventListener("click", getValues);</strong>
+                        The function then creates two variables, <strong>fizzValue</strong> & <strong>buzzValue</strong>
+                        whose values
+                        are passed respectively with the <strong>document.getElementById().value;</strong> method which
+                        are then converted into integers with the <strong>pareseInt()</strong> method. Inside a for
+                        loop, these parsed variables are then verified with the <strong>Number.isInteger()</strong>
+                        method. If both of the expression evaluates to true, the function creates an array
+                    </p>
                 </div>
             </div>
         </div>
