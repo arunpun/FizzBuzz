@@ -112,8 +112,54 @@ function fizzBuzz(fizzValue, buzzValue) {
                         are passed respectively with the <strong>document.getElementById().value;</strong> method which
                         are then converted into integers with the <strong>pareseInt()</strong> method. Inside a for
                         loop, these parsed variables are then verified with the <strong>Number.isInteger()</strong>
-                        method. If both of the expression evaluates to true, the function creates an array
-                    </p>
+                        method. If both of the expression evaluates to true, the function creates an array called
+                        <strong>fbArray</strong>
+                        which is used to call the <strong>fizzBuzz()</strong> function, which takes the variables,
+                        <strong>fizzValue</strong> &
+                        <strong>buzzValue</strong> as parameters. Since the function
+                        <strong>fizzBuzz()</strong>
+                        will return an array, the <strong>fbArray</strong> is further used as an argument to the
+                        <strong>displayData()</strong>
+                        function. If there are any invalid data, the user is presented with an appropriate message.</p>
+                    <hr>
+                    <h5>fizzBuzz()</h5>
+                    <p>This function first creates an empty array, <strong>returnArray</strong>, which will hold the
+                        final results.
+                        Since we already have access to <strong>fizzValue</strong> & <strong>buzzValue</strong>, we can
+                        commence
+                        the logic of this classic coding challenge in a for loop. The loop starts with an starting
+                        index of
+                        <strong>1</strong> which goes up to <strong>100</strong> while incrementing the index by
+                        <strong>1</strong>
+                        on each loop. Next, we have an <strong>if, else if</strong> & <strong>else</strong> statements.
+                        The statement
+                        first checks if the current value at <strong>i</strong> is cleanly divisible by both of the
+                        <strong>fizzValue</strong> &
+                        <strong>buzzValue</strong>. If the expression evaluates to <strong>True</strong>, the string
+                        <strong>
+                            "FizzBuzz"
+                        </strong> is pushed to the <strong>returnArray</strong>. Next up, we have an <strong>else
+                            if</strong>
+                        statement which checks if the current value at <strong>i</strong> is cleanly divisible by the
+                        <strong>
+                            fizzValue</strong>. If that is the case, the string <strong>Fizz</strong> is pushed into the
+                        return
+                        array. Similarly, we have another <strong>else if</strong> statement to check if the index value
+                        is cleanly
+                        divisible by the <strong>buzzValue</strong>. In this case, <strong>Buzz</strong> is pushed into
+                        the return array. Lastly, if none of the above statements are satisfied, the loop pushes the
+                        number itself into
+                        the array. The function then returns the results in an array.
+                        <p>
+                            <hr>
+                            <h5>displayData()</h5>
+                            <p>This function takes in a parameter, <strong>fbArray</strong> and initializes an empty
+                                string called
+                                <strong>templateRows</strong>. Using the <strong>array.forEach()</strong> method, the
+                                function starts
+                                to loop through each element in the argument array. Here, I have implemented a simple
+                                if/else statement
+                                to check whether a given element in the array is a number or a string. </p>
                 </div>
             </div>
         </div>
