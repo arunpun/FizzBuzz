@@ -37,10 +37,10 @@
                         <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                        <a class="nav-link" target="_blank" href="https://github.com/arunpun/FizzBuzz">Git Repo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="#">About</a>
+                        <a class="nav-link" target="_blank" href="https://arunpun-portfolio.netlify.app/">About</a>
                     </li>
                 </ul>
             </div>
@@ -97,6 +97,24 @@ function fizzBuzz(fizzValue, buzzValue) {
 
     return returnArray;
 }
+
+//Loop over the array and create a tablerow for each item.
+function displayData(fbArray) {
+    let templateRows = "";
+
+    //Loop over the array
+    fbArray.forEach(element => {
+        if (element.isInteger) {
+            templateRows += `&lt;tr>&lt;td>${element}&lt;/td>&lt;/tr>`;
+        } else {
+            templateRows += `&lt;tr>&lt;td>&lt;strong>${element}&lt;/strong>&lt;/td>&lt;/tr>`;
+        }
+    });
+
+    document.getElementById("results").innerHTML = templateRows;
+}
+
+
                 </code></pre>
                 </div>
                 <div class="col-lg-4">
@@ -161,8 +179,14 @@ function fizzBuzz(fizzValue, buzzValue) {
                                 if/else statement
                                 to check whether a given element in the array is a number or a string. If the element is
                                 an <strong>integer</strong>, using template literals, the function creates
-                                <strong>tr</strong> and
-                                <strong>td</strong elements and adds them to the <strong>templateRows</strong> variable.
+                                <strong>tr</strong> and <strong>td</strong> elements and adds them to the
+                                <strong>templateRows</strong>
+                                variable. The final result is then displayed to the user in a table by setting the inner
+                                HTML of
+                                the
+                                <strong>tbody</strong> element, with the id <strong>results</strong> to the values in
+                                the
+                                <strong>templaleRows</strong> variable.
                             </p>
                 </div>
             </div>

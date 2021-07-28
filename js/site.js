@@ -44,26 +44,10 @@ function fizzBuzz(fizzValue, buzzValue) {
 
 //Loop over the array and create a tablerow for each item.
 function displayData(fbArray) {
-    // //Get table body element from the page
-    // let tableBody = document.getElementById("results");
-
-    // //Get the template row
-    // let templateRow = document.getElementById("fbTemplate");
-
-    // //Clear table data
-    // tableBody.innerHTML = "";
-
     let templateRows = "";
 
     //Loop over the array
     fbArray.forEach(element => {
-
-        // //Import document fragment, make a copy
-        // let tableRow = document.importNode(templateRow.contentEditable, true);
-
-        // //Gets the value of all the elements with the td tag
-        // let rowCols = tableRow.querySelectorAll("td");
-
         if (element.isInteger) {
             templateRows += `<tr><td>${element}</td></tr>`;
         } else {
