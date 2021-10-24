@@ -1,59 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="h-100">
-
-<head>
+  <head>
     <title>App Name: A Coding Project By Arun Pun</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-    <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5db21ba9c6.js"
+      crossorigin="anonymous"
+    ></script>
 
-    <link href="./css/site.css" rel="stylesheet">
-    <link href="./css/prism.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/img/profile.png" </head> <body class="d-flex flex-column h-100">
-
+    <link href="./css/site.css" rel="stylesheet" />
+    <link href="./css/prism.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/img/profile.png"
+  </head>
+  <body class="d-flex flex-column h-100">
     <!--Nav section-->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top colorTheme">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">FIZZBUZZ</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="app.html">The App</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://github.com/arunpun/FizzBuzz">Git Repo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://arunpun-portfolio.netlify.app/">About</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="">FIZZBUZZ</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="app.html">The App</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="code.html"
+                >The Code</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                href="https://github.com/arunpun/FizzBuzz"
+                >Git Repo</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!--Main section-->
     <main class="flex-shrink-0">
-        <div class="container py-5 px-5 mt-5">
-            <h2 class="border-1 border-bottom border-dark">The Code for APP</h2>
-            <div class="row row-cols-1 row-cols-lg-2">
-                <div class="col-lg-8">
-                    <pre class="line-numbers"><code class="language-javascript">
+      <div class="container py-5 px-5 mt-5">
+        <h2 class="border-1 border-bottom border-dark">The Code for APP</h2>
+        <div class="row row-cols-1 row-cols-lg-2">
+          <div class="col-lg-8">
+            <pre class="line-numbers"><code class="language-javascript">
                         //Start function
 function getValues() {
     //Get values from the page
@@ -116,126 +137,171 @@ function displayData(fbArray) {
 
 
                 </code></pre>
-                </div>
-                <div class="col-lg-4">
-                    <p>The code is structured in three functions, <strong>getValues()</strong>,
-                        <strong>fizzBuzz()</strong> &
-                        <strong>displayData()</strong></p>
-                    <hr>
-                    <h5>getValues()</h5>
-                    <p>The function is triggered by an event listener,
-                        <strong>document.getElementById("btnSubmit").addEventListener("click", getValues);</strong>
-                        The function then creates two variables, <strong>fizzValue</strong> & <strong>buzzValue</strong>
-                        whose values
-                        are passed respectively with the <strong>document.getElementById().value;</strong> method which
-                        are then converted into integers with the <strong>pareseInt()</strong> method. Inside a for
-                        loop, these parsed variables are then verified with the <strong>Number.isInteger()</strong>
-                        method. If both of the expression evaluates to true, the function creates an array called
-                        <strong>fbArray</strong>
-                        which is used to call the <strong>fizzBuzz()</strong> function, which takes the variables,
-                        <strong>fizzValue</strong> &
-                        <strong>buzzValue</strong> as parameters. Since the function
-                        <strong>fizzBuzz()</strong>
-                        will return an array, the <strong>fbArray</strong> is further used as an argument to the
-                        <strong>displayData()</strong>
-                        function. If there are any invalid data, the user is presented with an appropriate message.</p>
-                    <hr>
-                    <h5>fizzBuzz()</h5>
-                    <p>This function first creates an empty array, <strong>returnArray</strong>, which will hold the
-                        final results.
-                        Since we already have access to <strong>fizzValue</strong> & <strong>buzzValue</strong>, we can
-                        commence
-                        the logic of this classic coding challenge in a for loop. The loop starts with an starting
-                        index of
-                        <strong>1</strong> which goes up to <strong>100</strong> while incrementing the index by
-                        <strong>1</strong>
-                        on each loop. Next, we have an <strong>if, else if</strong> & <strong>else</strong> statements.
-                        The statement
-                        first checks if the current value at <strong>i</strong> is cleanly divisible by both of the
-                        <strong>fizzValue</strong> &
-                        <strong>buzzValue</strong>. If the expression evaluates to <strong>True</strong>, the string
-                        <strong>
-                            "FizzBuzz"
-                        </strong> is pushed to the <strong>returnArray</strong>. Next up, we have an <strong>else
-                            if</strong>
-                        statement which checks if the current value at <strong>i</strong> is cleanly divisible by the
-                        <strong>
-                            fizzValue</strong>. If that is the case, the string <strong>Fizz</strong> is pushed into the
-                        return
-                        array. Similarly, we have another <strong>else if</strong> statement to check if the index value
-                        is cleanly
-                        divisible by the <strong>buzzValue</strong>. In this case, <strong>Buzz</strong> is pushed into
-                        the return array. Lastly, if none of the above statements are satisfied, the loop pushes the
-                        number itself into
-                        the array. The function then returns the results in an array.
-                        <p>
-                            <hr>
-                            <h5>displayData()</h5>
-                            <p>This function takes in a parameter, <strong>fbArray</strong> and initializes an empty
-                                string called
-                                <strong>templateRows</strong>. Using the <strong>array.forEach()</strong> method, the
-                                function starts
-                                to loop through each element in the argument array. Here, I have implemented a simple
-                                if/else statement
-                                to check whether a given element in the array is a number or a string. If the element is
-                                an <strong>integer</strong>, using template literals, the function creates
-                                <strong>tr</strong> and <strong>td</strong> elements and adds them to the
-                                <strong>templateRows</strong>
-                                variable. The final result is then displayed to the user in a table by setting the inner
-                                HTML of
-                                the
-                                <strong>tbody</strong> element, with the id <strong>results</strong> to the values in
-                                the
-                                <strong>templaleRows</strong> variable.
-                            </p>
-                </div>
-            </div>
+          </div>
+          <!-- <div class="col-lg-4">
+            <p>
+              The code is structured in three functions,
+              <strong>getValues()</strong>, <strong>fizzBuzz()</strong> &
+              <strong>displayData()</strong>
+            </p>
+            <hr />
+            <h5>getValues()</h5>
+            <p>
+              The function is triggered by an event listener,
+              <strong
+                >document.getElementById("btnSubmit").addEventListener("click",
+                getValues);</strong
+              >
+              The function then creates two variables,
+              <strong>fizzValue</strong> & <strong>buzzValue</strong> whose
+              values are passed respectively with the
+              <strong>document.getElementById().value;</strong> method which are
+              then converted into integers with the
+              <strong>pareseInt()</strong> method. Inside a for loop, these
+              parsed variables are then verified with the
+              <strong>Number.isInteger()</strong>
+              method. If both of the expression evaluates to true, the function
+              creates an array called
+              <strong>fbArray</strong>
+              which is used to call the <strong>fizzBuzz()</strong> function,
+              which takes the variables, <strong>fizzValue</strong> &
+              <strong>buzzValue</strong> as parameters. Since the function
+              <strong>fizzBuzz()</strong>
+              will return an array, the <strong>fbArray</strong> is further used
+              as an argument to the
+              <strong>displayData()</strong>
+              function. If there are any invalid data, the user is presented
+              with an appropriate message.
+            </p>
+            <hr />
+            <h5>fizzBuzz()</h5>
+            <p>
+              This function first creates an empty array,
+              <strong>returnArray</strong>, which will hold the final results.
+              Since we already have access to <strong>fizzValue</strong> &
+              <strong>buzzValue</strong>, we can commence the logic of this
+              classic coding challenge in a for loop. The loop starts with an
+              starting index of <strong>1</strong> which goes up to
+              <strong>100</strong> while incrementing the index by
+              <strong>1</strong>
+              on each loop. Next, we have an <strong>if, else if</strong> &
+              <strong>else</strong> statements. The statement first checks if
+              the current value at <strong>i</strong> is cleanly divisible by
+              both of the <strong>fizzValue</strong> &
+              <strong>buzzValue</strong>. If the expression evaluates to
+              <strong>True</strong>, the string <strong> "FizzBuzz" </strong> is
+              pushed to the <strong>returnArray</strong>. Next up, we have an
+              <strong>else if</strong> statement which checks if the current
+              value at <strong>i</strong> is cleanly divisible by the
+              <strong> fizzValue</strong>. If that is the case, the string
+              <strong>Fizz</strong> is pushed into the return array. Similarly,
+              we have another <strong>else if</strong> statement to check if the
+              index value is cleanly divisible by the
+              <strong>buzzValue</strong>. In this case, <strong>Buzz</strong> is
+              pushed into the return array. Lastly, if none of the above
+              statements are satisfied, the loop pushes the number itself into
+              the array. The function then returns the results in an array.
+            </p>
+
+            <p></p>
+            <hr />
+            <h5>displayData()</h5>
+            <p>
+              This function takes in a parameter, <strong>fbArray</strong> and
+              initializes an empty string called <strong>templateRows</strong>.
+              Using the <strong>array.forEach()</strong> method, the function
+              starts to loop through each element in the argument array. Here, I
+              have implemented a simple if/else statement to check whether a
+              given element in the array is a number or a string. If the element
+              is an <strong>integer</strong>, using template literals, the
+              function creates <strong>tr</strong> and
+              <strong>td</strong> elements and adds them to the
+              <strong>templateRows</strong>
+              variable. The final result is then displayed to the user in a
+              table by setting the inner HTML of the
+              <strong>tbody</strong> element, with the id
+              <strong>results</strong> to the values in the
+              <strong>templaleRows</strong> variable.
+            </p>
+          </div> -->
         </div>
+      </div>
     </main>
 
     <!--Footer section-->
     <footer class="footer mt-auto py-3 colorTheme">
-        <div class="container-fluid">
-            <div class="row row-cols-1 row-cols-lg-3 gy-2">
-                <div class="col text-light order-last order-lg-first">
-                    <div><span>&copy;2021</span> Arun Pun | punarun@hotmail.com</div>
-                </div>
-                <div class="col d-flex align-items-center justify-content-start justify-content-lg-center">
-                    <img src="./img/arunpun-white.svg" alt="Arun Pun Logo" height="24">
-                </div>
-                <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
-                    <div class="row">
-                        <div class="col social"><a href="https://www.linkedin.com/in/arun-pun/" target="_blank"><i
-                                    class="fab fa-linkedin fa-2x"></i></a></div>
-                        <div class="col social"><a href="https://github.com/arunpun" target="_blank"><i
-                                    class="fab fa-github fa-2x"></i></a></div>
-                        <div class="col social"><a href="https://www.instagram.com/justarunsthing/" target="_blank"><i
-                                    class="fab fa-instagram fa-2x"></i></a></div>
-
-                    </div>
-                </div>
+      <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-lg-3 gy-2">
+          <div class="col text-light order-last order-lg-first">
+            <div><span>&copy;2021</span> Arun Pun | punarun@hotmail.com</div>
+          </div>
+          <div
+            class="
+              col
+              d-flex
+              align-items-center
+              justify-content-start justify-content-lg-center
+            "
+          >
+            <img
+              src="./img/arunpun-white.svg"
+              alt="Arun Pun Logo"
+              height="24"
+            />
+          </div>
+          <div
+            class="
+              col
+              d-flex
+              align-items-center
+              justify-content-start justify-content-lg-end
+            "
+          >
+            <div class="row">
+              <div class="col social">
+                <a href="https://www.linkedin.com/in/arun-pun/" target="_blank"
+                  ><i class="fab fa-linkedin fa-2x"></i
+                ></a>
+              </div>
+              <div class="col social">
+                <a href="https://github.com/arunpun" target="_blank"
+                  ><i class="fab fa-github fa-2x"></i
+                ></a>
+              </div>
+              <div class="col social">
+                <a
+                  href="https://www.instagram.com/justarunsthing/"
+                  target="_blank"
+                  ><i class="fab fa-instagram fa-2x"></i
+                ></a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Prism JS -->
     <script src="./js/prism.js"></script>
     <script>
-        Prism.plugins.NormalizeWhitespace.setDefaults({
-            'remove-trailing': true,
-            'remove-indent': true,
-            'left-trim': true,
-            'right-trim': true
-        })
+      Prism.plugins.NormalizeWhitespace.setDefaults({
+        "remove-trailing": true,
+        "remove-indent": true,
+        "left-trim": true,
+        "right-trim": true,
+      });
     </script>
-    </body>
-
+  </body>
 </html>
